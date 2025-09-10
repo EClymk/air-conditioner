@@ -27,7 +27,13 @@ function Home() {
    */
   function getClassByMode() {
     if (ac.status) {
-      return ac.mode === "hot" ? "hot-color" : "cold-color";
+      if (ac.mode === "hot") {
+        return "hot-color";
+      }
+      if (ac.mode === "cold") {
+        return "cold-color";
+      }
+      return "";
     } else {
       return "";
     }

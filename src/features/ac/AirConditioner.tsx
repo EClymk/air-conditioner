@@ -82,7 +82,13 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
       color={acColor.display}
     >
       <Typography align="left" variant="subtitle2">
-        <span>{props.mode === "cold" ? "❄" : "☀️"}</span>️️
+        <span>
+          {props.mode === "cold"
+            ? "❄"
+            : props.mode === "hot"
+            ? "☀️"
+            : "🌀"}
+        </span>️️
       </Typography>
       <AcTemperature />
     </Box>
