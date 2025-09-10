@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppThunk, RootState } from "../../app/store";
 import { setMessage, setOpen } from "../toast/toastSlice";
 
-export type AcMode = "cold" | "hot";
+export type AcMode = "cold" | "hot" | "fan";
 export interface AcState {
   /**
    * 状态

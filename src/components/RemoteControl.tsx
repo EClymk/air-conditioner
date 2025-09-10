@@ -9,6 +9,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
+import ToysIcon from "@material-ui/icons/Toys";
 
 import { green } from "@material-ui/core/colors";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
@@ -185,6 +186,16 @@ export default function RemoteControl() {
           }}
         >
           <WbSunnyIcon />
+        </RCButton>
+        <RCButton
+          aria-label="fan"
+          className={classes.margin}
+          style={{ backgroundColor: "lightblue", color: "white" }}
+          onClick={() => {
+            dispatch(setMode("fan"));
+          }}
+        >
+          <ToysIcon />
         </RCButton>
       </div>
       <RCButton
